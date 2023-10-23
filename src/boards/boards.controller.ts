@@ -9,7 +9,7 @@ import { GetUser } from 'src/auth/get-user.dacorator';
 import { User } from 'src/auth/user.entity';
 
 @Controller('boards')
-@UseGuards(AuthGuard())
+@UseGuards(AuthGuard()) // AuthGuard()는 passport에서 제공됨
 export class BoardsController {
   private logger = new Logger('BoardsController');
   constructor(private boardsService: BoardsService) { }

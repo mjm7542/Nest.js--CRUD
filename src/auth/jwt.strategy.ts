@@ -8,6 +8,8 @@ import * as config from 'config'
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
+  // extends PassportStrategy(Strategy)를 통해 AuthGuard()에 사용된다.
+  // PassportStrategy(Strategy, jwt) -> jwt가 기본값 변경을 하고 싶으면 (Strategy, myJwt) 이렇게 변경
   constructor(
     @InjectRepository(UserRepository)
     private userRepository: UserRepository

@@ -13,6 +13,7 @@ const jwtConfig = config.get('jwt');
 @Module({
   imports: [
     PassportModule.register({ defaultStrategy: 'jwt' }),
+    // AuthGuard()의 기본값 'jwt' 설정
     JwtModule.register({
       secret: process.env.JWT_SECRET || jwtConfig.secret, // 기존 express에서 사용하던 시크릿키
       signOptions: {

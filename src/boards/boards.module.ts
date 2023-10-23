@@ -16,3 +16,7 @@ import { AuthModule } from 'src/auth/auth.module';
   providers: [BoardsService],
 })
 export class BoardsModule { }
+
+// NestJS의 모듈 시스템은 계층적이고 독립적입니다. 
+// AppModule에서 어떤 모듈을 임포트하는 것은 애플리케이션의 최상위 레벨에서 해당 모듈을 사용하겠다는 것을 의미합니다. 
+// 그러나 각 개별 모듈 내에서는 다른 모듈의 서비스나 기능을 사용하려면 해당 모듈을 직접 임포트해야 합니다.
